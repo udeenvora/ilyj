@@ -3,110 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valentine's Surprise</title>
-    <style>
-        /* Your CSS code here (unchanged from your original) */
-        #letter-container {
-            text-align: center;
-            margin: 0 auto;
-        }
+    <title>Valentine's Day</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="container">
+        <div id="message">
+            <p class="main-text">Will you be my valentine?</p>
+            <div class="buttons">
+                <button id="yes-btn">Yes</button>
+                <button id="no-btn">No</button>
+            </div>
+        </div>
+        <div id="celebration-container" class="hidden">
+            <p class="celebration-text">YEYEYEYEYEEY I LOVEEE YOUUU POOOKIEIEEE 💖</p>
+            <img src="celebration.gif" alt="Celebration GIF" class="celebration-gif">
+            <button id="show-letter-btn">Click Me</button>
+        </div>
+        <div id="letter-container" class="hidden">
+            <img src="letter-image.png" alt="Letter" class="letter-image">
+        </div>
+    </div>
 
-        .letter-image {
-            width: 70%;
-            max-width: 600px;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-        }
+    <audio id="click-sound" src="click.mp3" preload="auto"></audio>
+    <audio id="love-song" src="love-song.mp3" preload="auto" loop></audio>
 
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(to bottom right, #ffe6e6, #fff5f5);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            color: #4a2c2a;
-            overflow: hidden;
-        }
-
-        .hidden {
-            display: none;
-        }
-
-        #message {
-            text-align: center;
-        }
-
-        .main-text {
-            font-size: 3rem;
-            font-family: 'Dancing Script', cursive;
-            color: #ff79d0;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-
-        .buttons {
-            margin-top: 20px;
-        }
-
-        button {
-            padding: 12px 30px;
-            font-size: 1.2rem;
-            border: none;
-            background-color: #ff79d0;
-            color: white;
-            cursor: pointer;
-            margin: 10px;
-            border-radius: 10px;
-            transition: 0.3s;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        button:hover {
-            background-color: #ff44b3;
-        }
-
-        button.shrink {
-            transform: scale(0.8);
-        }
-
-        #celebration-container {
-            text-align: center;
-        }
-
-        .celebration-text {
-            font-size: 2rem;
-            color: #ff44b3;
-            font-family: 'Dancing Script', cursive;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-            margin-bottom: 20px;
-        }
-
-        .celebration-gif {
-            width: 300px;
-            height: auto;
-            margin: 20px 0;
-        }
-
-        @keyframes confetti {
-            0% {
-                transform: translateY(-100%);
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(100vh);
-                opacity: 0;
-            }
-        }
-
-        .confetti {
-            position: fixed;
-            top: 0;
-            left: 50%;
-            width: 10px;
-            height: 10px;
-            background-color: #ff79d0;
-            opacity: 0;
-            animation: confetti 2s infinite ease-in
+    <script src="script.js"></script>
+</body>
+</html>
