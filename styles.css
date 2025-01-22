@@ -1,1 +1,132 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom right, #ffe6e6, #fff5f5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #4a2c2a;
+    overflow: hidden;
+}
 
+/* Hide the "hidden" container by default */
+.hidden {
+    display: none;
+}
+
+/* Message Styles */
+#message {
+    text-align: center;
+}
+
+.main-text {
+    font-size: 3rem;
+    font-family: 'Dancing Script', cursive;
+    color: #ff79d0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Button Styles */
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    border: none;
+    background-color: #ff79d0;
+    color: white;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 10px;
+    transition: 0.3s;
+    font-family: 'Poppins', sans-serif;
+}
+
+button:hover {
+    background-color: #ff44b3;
+}
+
+button.shrink {
+    transform: scale(0.8);
+}
+
+/* Celebration Styles */
+#celebration-container {
+    text-align: center;
+}
+
+.celebration-text {
+    font-size: 2rem;
+    color: #ff44b3;
+    font-family: 'Dancing Script', cursive;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+}
+
+.celebration-gif {
+    width: 300px;
+    height: auto;
+    margin: 20px 0;
+}
+
+#letter-container {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.letter-image {
+    width: 70%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Confetti Styles */
+@keyframes confetti {
+    0% {
+        transform: translateY(-100%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+.confetti {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: #ff79d0;
+    opacity: 0;
+    animation: confetti 2s infinite ease-in;
+    z-index: 9999;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    .main-text {
+        font-size: 2rem;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .celebration-text {
+        font-size: 1.5rem;
+    }
+
+    .letter-image {
+        width: 95%;
+    }
+}
